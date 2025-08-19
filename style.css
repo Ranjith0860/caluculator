@@ -1,0 +1,235 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+
+
+.discplay {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+#display{
+      background: linear-gradient(45deg, #e19f7e, #fdcccd);
+
+  width: 95%;
+  height: 50px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  text-align: right;
+ 
+}
+/* Operators (+ - * / .) */
+#ex {
+  background: linear-gradient(45deg, #ff9966, #ff5e62);
+  color: #fff;
+}
+#ex:active{
+      background: linear-gradient(45deg, #f75b0d, #ff5e62);
+  color: #040303;
+}
+
+/* Clear (C) button */
+#fx {
+  background: linear-gradient(45deg, #434343, #000000);
+  color: #fff;
+}
+
+#fx:active{
+    
+  background: linear-gradient(45deg, #555454, #000000);
+  color: #d81313;
+}
+
+/* Equal (=) button */
+#gx {
+  background: linear-gradient(45deg, #56ab2f, #a8e063);
+  color: #fff;
+}
+#gx:active{
+    background: linear-gradient(45deg, #ec5103, #a8e063);
+  color: #f73e19;
+}
+
+
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(5, 70px);
+  gap: 10px;
+}
+
+button {
+  height: 60px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(45deg, #36d1dc, #5b86e5);
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+button:active{
+    color: #111111;
+    transition: 1ms;
+    transform: translateY(5px);
+       background: linear-gradient(45deg, #08e5f5, #2060eb);
+
+}
+
+
+
+/* Default: Desktop (your current code is fine for large screens) */
+
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  #keys {
+    grid-template-columns: repeat(4, 70px); /* fewer columns */
+    gap: 8px;
+  }
+
+  button {
+    height: 55px;
+    font-size: 16px;
+  }
+
+  #display {
+    font-size: 18px;
+  }
+}
+
+/* Large Phones (max-width: 768px) */
+@media (max-width: 768px) {
+  .discplay {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  #keys {
+    grid-template-columns: repeat(4, 60px);
+    gap: 6px;
+  }
+
+  button {
+    height: 50px;
+    font-size: 16px;
+  }
+
+  #display {
+    font-size: 18px;
+    height: 45px;
+  }
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  body {
+    background: #fafafa;
+  }
+
+  .discplay {
+    width: 90%;
+    padding: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+
+  #keys {
+    grid-template-columns: repeat(4, 1fr); /* flexible */
+    gap: 5px;
+  }
+
+  button {
+    height: 45px;
+    font-size: 14px;
+    border-radius: 8px;
+  }
+
+  #display {
+    font-size: 16px;
+    height: 40px;
+  }
+}
+
+/* Extra small devices (like old small phones < 360px) */
+@media (max-width: 360px) {
+    body{
+          background: linear-gradient(135deg, #11998e, #38ef7d);
+
+    }
+  .discplay {
+    width: 95%;
+    padding: 8px;
+    
+  }
+
+  button {
+    height: 40px;
+    font-size: 12px;
+  }
+
+  #display {
+    font-size: 14px;
+    height: 35px;
+  }
+}
+
+
+ @media (max-width: 1024px) {
+    #title {
+      font-size: 35px;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  /* Large phones */
+  @media (max-width: 768px) {
+    #title {
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+      body{
+          background: linear-gradient(135deg, #11998e, #38ef7d);
+
+    }
+  }
+
+  /* Small phones */
+  @media (max-width: 480px) {
+    #title {
+      font-size: 24px;
+      letter-spacing: 0.5px;
+    }
+      body{
+          background: linear-gradient(135deg, #11998e, #38ef7d);
+
+    }
+  }
+
+  /* Very small devices */
+  @media (max-width: 360px) {
+    #title {
+      font-size: 20px;
+      letter-spacing: 0px;
+    }
+      body{
+          background: linear-gradient(135deg, #11998e, #38ef7d);
+
+    }
+  }
+
